@@ -1,5 +1,4 @@
 import React from "react";
-import backgroundImage from "./assets/background.svg";
 function Header() {
   return (
     <header className="header">
