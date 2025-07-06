@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
+import LoginModal from "./components/LoginModal";
+import RegisterModal from "./components/RegisterModal";
+
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+  const [currentUser, setCurrentUser] = useState();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <AppContext.Provider
+      value={{
+        currentUser,
+        setCurrentUser,
+        isLoggedIn,
+        setIsLoggedIn,
+        openLoginModal: () => setIsLoginModalOpen(true),
+        openRegisterModal: () => setIsRegisterModalOpen(true),
+        closeModals: () => {
+          setIsLoginModalOpen(false);
+          setIsRegisterModalOpen(false);
+        },
+      }}
+    >
+      <div className="app">
+        <Header />
+        <Main />
+        <Footer />
+        {isLoginModalOpen && <LoginModal />}
+        {isRegisterModalOpen && <RegisterModal />}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </AppContext.Provider>
+  );
 }
 
-export default App
+export default App;
