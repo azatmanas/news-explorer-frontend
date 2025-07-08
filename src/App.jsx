@@ -1,9 +1,10 @@
 import { useState } from "react";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
-import LoginModal from "./components/LoginModal";
-import RegisterModal from "./components/RegisterModal";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import Footer from "./components/Footer/Footer";
+import LoginModal from "./components/LoginModal/LoginModal";
+import RegisterModal from "./components/RegisterModal/RegisterModal";
+import { AppContext } from "./utils/AppContext";
 
 import "./App.css";
 
