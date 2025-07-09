@@ -1,10 +1,15 @@
-import React from "react";
+import backgroundImage from "../../assets/background.svg";
+import "./Main.css";
 
 function Main() {
   return (
-    <header className="header">
-      <div className="header__logo"></div>
-    </header>
+    <div className="main__container">
+      <img
+        src={backgroundImage}
+        alt="background"
+        className="main__background"
+      />
+    </div>
   );
 }
 

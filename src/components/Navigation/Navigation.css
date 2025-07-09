@@ -1,0 +1,24 @@
+.navigation {
+  width: 1440;
+  height: 80;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff; /* Adjust to your design */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navigation__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  align-items: center;
+  margin-left: auto;
+}
+.navigation__home {
+}
+.navigation__signIn {
+}

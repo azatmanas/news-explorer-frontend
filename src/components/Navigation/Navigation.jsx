@@ -1,10 +1,29 @@
 import React from "react";
-
-function Navigation() {
+import { Link } from "react-router-dom";
+import "./Navigation.css";
+function Navigation({ isLoggedIn, onLoginClick }) {
   return (
-    <header className="header">
-      <div className="header__logo"></div>
-    </header>
+    <nav className="navigation">
+      <ul className="navigation__list">
+        <li>
+          {" "}
+          <Link to="/" className="navigation__home">
+            Home
+          </Link>{" "}
+        </li>
+        {isLoggedIn ? (
+          <li>
+            <button>Sign Out</button>
+          </li>
+        ) : (
+          <li>
+            <button onClick={onLoginClick} className="navigation__signIn">
+              Sign In
+            </button>
+          </li>
+        )}
+      </ul>
+    </nav>
   );
 }
 

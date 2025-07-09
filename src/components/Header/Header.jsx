@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Navigation from "../Navigation/Navigation";
 import { AppContext } from "../../utils/AppContext";
+import "./Header.css";
 function Header() {
   const { isLoggedIn, openLoginModal, openRegisterModal } =
     useContext(AppContext);
