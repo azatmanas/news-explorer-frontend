@@ -1,4 +1,4 @@
-.navigation {
+/* .navigation {
   width: 1440;
   height: 80;
   opacity: 1;
@@ -6,9 +6,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #ffffff; /* Adjust to your design */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
 }
+
 .navigation__list {
   display: flex;
   list-style: none;
@@ -21,4 +22,43 @@
 .navigation__home {
 }
 .navigation__signIn {
+} */
+
+/* Navigation.css */
+.navigation {
+  width: 100%;
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: flex-end; /* This aligns all items to the right */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* Adds space between items */
+}
+
+.navigation__home {
+  text-decoration: none;
+  color: inherit; /* Or any color you prefer */
+}
+
+.navigation__signIn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: inherit; /* Or any color you prefer */
+  font: inherit;
+}
+
+/* If you want to style the Sign Out button the same way */
+.navigation__list button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: inherit;
+  font: inherit;
 }
