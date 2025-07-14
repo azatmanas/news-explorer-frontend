@@ -26,12 +26,11 @@
 
 /* Navigation.css */
 .navigation {
-  width: 100%;
+  display: flex;
 }
 
 .navigation__list {
   display: flex;
-  justify-content: flex-end; /* This aligns all items to the right */
   align-items: center;
   list-style: none;
   padding: 0;

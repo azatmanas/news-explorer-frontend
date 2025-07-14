@@ -7,14 +7,12 @@ function Header() {
     useContext(AppContext);
   return (
     <header className="header">
-      <div className="header__container">
-        <h1 className="header__title">NewsExplore</h1>
-        <Navigation
-          isLoggedIn={isLoggedIn}
-          onLoginClick={openLoginModal}
-          onRegisterClick={openRegisterModal}
-        />
-      </div>
+      <h1 className="header__title">NewsExplore</h1>
+      <Navigation
+        isLoggedIn={isLoggedIn}
+        onLoginClick={openLoginModal}
+        onRegisterClick={openRegisterModal}
+      />
     </header>
   );
 }
